@@ -17,7 +17,6 @@
         <tr>
           <th scope="col">No</th>
           <th scope="col">Judul Berita</th>
-          <th scope="col">Kategori</th>
           <th scope="col">Action</th>
         </tr>
       </thead>
@@ -26,7 +25,6 @@
         <tr>
           <td>{{ $loop->iteration }}</td>
           <td>{{ $berita->judul }}</td>
-          <td>{{ $berita->category->name }}</td>
           <td>
               <a href="/dashboard/berita/{{ $berita->slug }}" class="badge bg-info"><span data-feather="eye"></span></a>
               <a href="" class="badge bg-light"><span data-feather="edit"></span></a>

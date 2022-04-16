@@ -15,6 +15,11 @@ class CreateSewasTable extends Migration
     {
         Schema::create('sewas', function (Blueprint $table) {
             $table->id();
+            $table->string('nama_Hotel')->unique();
+            $table->string('alamat');
+            $table->integer('harga');
+            $table->integer('telepon');
+            $table->integer('rating');
             $table->timestamps();
         });
     }

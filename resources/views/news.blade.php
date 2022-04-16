@@ -5,7 +5,7 @@
     <div class="container">
         <article>
             <h2>{{ $berita->judul }}</h2>
-            <p>Kategori - <a href="/categories/{{ $berita->category->slug }}">{{ $berita->category->name }}</a></p>
+            <img src="{{ $berita->gambar }}" alt="">
             
                 {!! $berita->isi !!}
             

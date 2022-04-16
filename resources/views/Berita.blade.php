@@ -25,9 +25,7 @@
         <div class="card-body">
           <h5 class="card-title">{{ $berita->judul }}</h5>
           <p class="card-text">{{ $berita->excerpt }}</p>
-          {{-- last update laravel --}}
-          {{-- <p class="card-text"><small class="text-muted">Last updated {{ $berita->updated_at->diffForHumans() }}</small></p> --}}
-          <p class="card-text"><small class="text-muted">Last updated   {{ $berita->updated_at->diffForHumans() }}</small></p>
+          <p class="card-text"><small class="text-muted">Last updated {{ $berita->updated_at->diffForHumans() }}</small></p>
         </div>
         <div class="col text-right aa">
           <button type='button' class='btn btn-primary center-block'><a href="/berita/{{ $berita->slug }}" class="text-decoration-none text-light aa">Read more</a></button>
@@ -38,4 +36,3 @@
     @endforeach
   </div>
   @endsection
-  
