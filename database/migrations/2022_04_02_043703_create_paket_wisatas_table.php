@@ -13,16 +13,15 @@ class CreatePaketWisatasTable extends Migration
      */
     public function up()
     {
-        Schema::create('paket_wisatas', function (Blueprint $table) {
+        Schema::create('pakets', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_wisata');
-            $table->string('gambar');
-            $table->string('slug')->unique();
+            $table->string('nama')->unique();
+            $table->string('image');
             $table->string('alamat');
-            $table->string('jam_operasional');
-            $table->integer('harga_tiket');
-            $table->integer('telepon');
-            $table->integer('rating');
+            $table->string('jam');
+            $table->string('harga');
+            $table->string('telepon');
+            $table->string('rating');
 
             $table->timestamps();
         });
@@ -35,6 +34,6 @@ class CreatePaketWisatasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('paket_wisatas');
+        Schema::dropIfExists('pakets');
     }
 }

@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\PaketWisata;
+use App\Models\Paket;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\StorePaketWisataRequest;
 use App\Http\Requests\UpdatePaketWisataRequest;
 
@@ -15,7 +16,7 @@ class PaketWisataController extends Controller
      */
     public function index()
     {
-        $paketwisatas = PaketWisata::all();
-        return view('PaketWisata', compact('paketwisatas'));
+        $pakets = Paket::latest()->get();
+        return view('PaketWisata', compact('pakets'));
     }
 }
